@@ -12,11 +12,27 @@ function print (text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid (name) {
+    let a = name.replace(/\s+/g, '');
+    let b = name.length;
+    let c = a.length;
+    if (b > c)
+    {
+        return false;
+    }
+
+    else if(b >= 4 )
+    {
+        return true;
+    }
+
+    else return false;
+
+
 }
 
 function sayHello () {
-    let userName = prompt('Введите ваше имя');
-
+    //let userName = prompt('Введите ваше имя');
+    let userName = 'q qqq';
     if (isValid(userName)) {
         print('Welcome back, ' + userName + '!');
     } else {
